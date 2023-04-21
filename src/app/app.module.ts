@@ -6,17 +6,18 @@ import { AppComponent } from './app.component';
 
 import { TodoModule } from './todo/todo.module';
 import { InputBoxComponent } from './shared/components/input-box/input-box.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputBoxComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule
+    TodoModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
