@@ -7,12 +7,11 @@
       <input matInput (keyup.enter)="emitValue(txtDescription.value)" class="w-3 rounde" type="text" name="description"
         placeholder="Write new todo...." #txtDescription>
 
-      <button mat-icon-button color="primary" aria-label="Icon button send todo">
+      <button (click)="emitValue(txtDescription.value)" mat-icon-button color="primary"
+        aria-label="Icon button send todo">
         <mat-icon>send</mat-icon>
       </button>
     </div>
   </mat-form-field>
-
-
 
 </div>
