@@ -25,13 +25,18 @@ export class TodoListComponent implements OnChanges {
 
   // Validating before to render in html
   private validateTodosToShow(): void {
-    if (this.option === 'all') {
-      this.showTodos = this.todos;
-    } else if (this.option === 'active') {
-      this.showTodos = this.todos.filter((todo) => todo.completed === false);
-    } else {
-      this.showTodos = this.todos.filter((todo) => todo.completed === true);
+    switch (this.option) {
+      case 'all':
+        this.showTodos = this.todos;
+        break;
+      case 'active':
+        this.showTodos = this.todos.filter((todo) => todo.completed === false);
+        break;
+      case 'completed':
+        this.showTodos = this.todos.filter((todo) => todo.completed === true);
+        break;
+      default:
+        this.showTodos = this.todos;
     }
   }
-
 }
