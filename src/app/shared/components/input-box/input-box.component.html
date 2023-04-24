@@ -1,1 +1,13 @@
-<p>input-box works!</p>
+<div class="row d-flex align-item-center">
+
+
+  <mat-form-field class="w-full flex align-item-center justify-content-between">
+    <mat-label>Todo</mat-label>
+    <input matInput (keyup.enter)="emitValue(txtDescription.value)" class="w-3 rounde" type="text" name="description"
+      placeholder="Write new todo...." #txtDescription>
+
+  </mat-form-field>
+
+
+
+</div>

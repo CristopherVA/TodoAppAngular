@@ -1,0 +1,11 @@
+<div class="flex flex-column mt-1">
+  <div class="flex justify-content-between align-item-center">
+    <mat-checkbox (click)="changeTodoStatus(todo.id,!todo.completed)" checked="{{todo.completed}}">
+      <div>{{todo.description}}</div>
+    </mat-checkbox>
+    <button (click)="deleteTodoById(todo.id)" mat-icon-button color="warn">
+      <i class="bi bi-trash"></i>
+      <mat-icon>trash</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,12 +1,11 @@
-<ul class="nav justify-content-center mt-3 ">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-</ul>
-<hr>
+<mat-tab-group>
+  <mat-tab label="All">
+    <todo-list [todos]="todos" [option]="'all'"></todo-list>
+  </mat-tab>
+  <mat-tab label="Active">
+    <todo-list [todos]="todos" [option]="'active'"></todo-list>
+  </mat-tab>
+  <mat-tab label="Completed">
+    <todo-list [todos]="todos" [option]="'completed'"></todo-list>
+  </mat-tab>
+</mat-tab-group>

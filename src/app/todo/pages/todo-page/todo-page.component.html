@@ -1,8 +1,18 @@
-<div class="row">
-    <h2 class="text-center">#Todo</h2>
+<div class="card flex flex-column w-9  m-auto">
+  <h2 class="text-center">#Todo</h2>
 
-    <div class="row">
-        <app-nav-todo></app-nav-todo>
-    </div>
-    <!-- <nav-todo></nav-todo> -->
+  <!-- Input Text -->
+  <div class="card">
+    <shared-input-box (onValue)="createNewTodo($event)"></shared-input-box>
+  </div>
+
+  <!-- Nav Todo -->
+  <nav-todo *ngIf="todos.length > 0; else alert" [todos]="todos"></nav-todo>
+
 </div>
+
+<ng-template #alert>
+  <div class="flex justify-content-center align-item-center text-lg text-bold bg-purple-600 ">
+    <strong>NOT TASK!</strong>
+  </div>
+</ng-template>

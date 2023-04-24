@@ -1,23 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { TodoModule } from './todo/todo.module';
-import { InputBoxComponent } from './shared/components/input-box/input-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './material/material.module';
+import { SharedModule } from './shared/shared.module';
+import { TodoModule } from './todo/todo.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputBoxComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    TodoModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    MaterialModule,
+    SharedModule,
+    TodoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
